@@ -28,12 +28,12 @@
   <button data-tab="budget"><i>🎯</i><span>预算</span></button>
   <button data-tab="settings"><i>⚙️</i><span>设置</span></button>
 </nav>
+<div id="sheet-root"></div>
+<div id="toast" role="status"></div>
+<input type="file" id="file-import" accept=".csv,.txt,.xlsx,text/csv,text/plain,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" hidden>
+<input type="file" id="file-restore" accept=".json,application/json" hidden>
+<noscript><p style="padding:24px">智能记账需要开启 JavaScript 才能使用。</p></noscript>
 <script src="lib.js"></script>
 <script src="app.js"></script>
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('./sw.js').catch(console.error);
-}
-</script>
 </body>
 </html>
